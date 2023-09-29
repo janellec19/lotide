@@ -15,6 +15,13 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([1,2], [1,2]);
-assertArraysEqual([2,2], [1,2]);
-assertArraysEqual([], [1, 2]);
+const flatten = function(arr) {
+
+  let flatArray = (arr.flat()); //flattens the array to the depth of 1
+  return flatArray; // and it will print the flattened array
+
+};
+
+
+const result = flatten([1, 2, [3, 4], 5, [6]]);
+assertArraysEqual(result, [1, 2, 3, 4, 5, 6]);
