@@ -12,13 +12,13 @@ const assertEqual = function(actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
-  for (const item of allItems) {
-    console.log(item);
-    if (itemsToCount[item]) {
-      if (results[item]) {
-        results[item] ++;
+  for (const item of allItems) { //creates a key to allitems
+    console.log(item);           // prints the keys of the object
+    if (itemsToCount[item]) {    // counts specific key
+      if (results[item]) {        //if the key is found in results
+        results[item] ++;         //count it
       } else {
-        results[item] = 1;
+        results[item] = 1;        //if a key isn't found, it's not added
       }
     }
   }
