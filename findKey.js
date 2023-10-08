@@ -7,10 +7,10 @@ const assertEqual = function(actual, expected) {
 
 const findKey = function(obj, callback) {
   for (let key in obj) {        //scan the object using object.keys method
-    const target = obj[key];
-    const comparisonResult = callback(target);
-    if (comparisonResult) {
-      return key;
+    const target = obj[key];   //create a target variable of what you're looking for in the array
+    const comparisonResult = callback(target);  //create a variable to compare the output of the callback function to the search
+    if (comparisonResult) {   //if the target is found
+      return key;             // return the key
     }
   }
 };
